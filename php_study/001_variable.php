@@ -18,4 +18,13 @@
   echo $GLOBALS['num1'].'<br>';
   echo $GLOBALS['num2'].'<br>';
   echo $GLOBALS['num3'].'<br>';
+  /*
+  Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job.
+  */
+  function staticEg(){
+    static $st = 12;
+    echo $st;
+  }
+  staticEg();
+  echo $st;
 ?>
